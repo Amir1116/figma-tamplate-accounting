@@ -21,18 +21,21 @@ const path = {
   js:'dist/assets/js/',
   css:'dist/assets/css/',
   images:'dist/assets/img/',
+  fonts:'dist/assets/fonts/',
   },
  src: {
   html:'src/*.html',
   js:'src/assets/js/*.js',
   css:'src/assets/sass/style.scss',
   images:'src/assets/img/**/*.{jpg,png,svg,ico}',
+  fonts:'src/assets/fonts/**/*.{ttf,woff,woff2,eot}',
   },
  watch: {
   html:'src/**/*.html',
   js:'src/assets/js/**/*.js',
   css:'src/assets/sass/**/*.scss',
   images:'src/assets/img/**/*.{jpg,png,svg,ico}',
+  fonts:'src/assets/fonts/**/*.{ttf,woff,woff2,eot}',
   },
   clean:'./dist',
 }
@@ -95,6 +98,10 @@ function images(){
     .pipe(imageMin())
     .pipe(dest(path.build.images))
 }
+function fonts(){
+  return src(path.src.fonts)    
+    .pipe(dest(path.build.fonts))
+}
 function clean(){
   return del(path.clean);
 }
@@ -103,6 +110,7 @@ function watchFiles(){
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js],js);
   gulp.watch([path.watch.images],images);
+  gulp.watch([path.watch.fonts],fonts);
 }
 function browserS(){
   browserSync.init({
@@ -112,12 +120,13 @@ function browserS(){
     port: 3000,
   })
 }
-const build = gulp.series(clean,gulp.parallel(html,css,js,images));
+const build = gulp.series(clean,gulp.parallel(html,css,js,images,fonts));
 const watch = gulp.parallel(build,watchFiles,browserS)
 exports.html = html;
 exports.css = css;
 exports.js = js;
 exports.images = images;
+exports.fonts = fonts;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
