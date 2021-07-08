@@ -6,109 +6,76 @@
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
-}
-
-.our-services__container {
-	display: flex;
-	flex-direction: column;
-}
-.section__title {
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 1.5rem;
-	line-height: 2rem;
-	color: $gray_light;
-
-	@media screen and (max-width: 650px) {
-		text-align: center;
-		margin: 0;
-	}
-}
-@mixin description-font {
-	font-family: 'Merriweather';
-	font-style: normal;
-	font-weight: 900;
-	font-size: 3rem;
-	line-height: 4.3rem;
-	color: $gray_middle;
-}
-.section__description {
-	margin-top: 2.5rem;
-	margin-bottom: 6.3rem;
-	@include description-font;
-
-	@media screen and (max-width: 650px) {
-		text-align: center;
-		font-size: 2rem;
-
-		margin: 0;
-		margin-bottom: 2rem;
-	}
-	@media screen and (max-width: 400px) {
-		font-size: 1.5rem;
-	}
-}
-
-.our-services-menu {
-	display: grid;
-	grid-gap: 1.9rem;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 22.5rem);
-
-	@media screen and (max-width: 950px) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(3, 22.5rem);
+	.our-services__container {
+		display: flex;
+		flex-direction: column;
 	}
 
-	@media screen and (max-width: 650px) {
-		grid-template-columns: 1fr;
-		grid-template-rows: auto;
-	}
-}
+	.our-services-menu {
+		display: grid;
+		grid-gap: 1.9rem;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 22.5rem);
 
-.our-services__menu-item {
-	display: flex;
+		@media screen and (max-width: 950px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 22.5rem);
+		}
 
-	padding: 2.8rem;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-		url('../img/servises/service-img.png') center center/cover;
-	cursor: pointer;
+		@media screen and (max-width: 650px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
+		}
 
-	transition: all 0.5s ease;
+		.our-services__menu-item {
+			display: flex;
 
-	&:hover {
-		background: linear-gradient(
-				0deg,
-				rgba(14, 146, 240, 0.5),
-				rgba(0, 95, 163, 0.5)
-			),
-			url('../img/servises/service-img.png') center center/cover;
-	}
-	@media screen and (max-width: 650px) {
-		text-align: center;
+			padding: 2.8rem;
+			background: linear-gradient(
+					0deg,
+					rgba(0, 0, 0, 0.4),
+					rgba(0, 0, 0, 0.4)
+				),
+				url('../img/servises/service-img.png') center center/cover;
+			cursor: pointer;
+
+			transition: all 0.5s ease;
+
+			&:hover {
+				background: linear-gradient(
+						0deg,
+						rgba(14, 146, 240, 0.5),
+						rgba(0, 95, 163, 0.5)
+					),
+					url('../img/servises/service-img.png') center center/cover;
+			}
+			@media screen and (max-width: 650px) {
+				text-align: center;
+			}
+
+			.our-services__menu-link {
+				align-self: flex-end;
+				text-decoration: none;
+
+				font-family: 'Lato', sans-serif;
+				font-style: normal;
+				font-weight: 900;
+				font-size: 1.5rem;
+				line-height: 1.9rem;
+
+				color: $white-color;
+			}
+		}
+
+		.active-service-item {
+			background: linear-gradient(
+					0deg,
+					rgba(14, 146, 240, 0.5),
+					rgba(0, 95, 163, 0.5)
+				),
+				url('../img/servises/service-img.png') center center/cover;
+		}
 	}
 }
 
-.active-service-item {
-	background: linear-gradient(
-			0deg,
-			rgba(14, 146, 240, 0.5),
-			rgba(0, 95, 163, 0.5)
-		),
-		url('../img/servises/service-img.png') center center/cover;
-}
-
-.our-services__menu-link {
-	align-self: flex-end;
-	text-decoration: none;
-
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 1.5rem;
-	line-height: 1.9rem;
-
-	color: #ffffff;
-}
 // =======================================end section our-services

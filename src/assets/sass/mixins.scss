@@ -20,3 +20,11 @@
 	width: 3.75rem;
 	height: 3.75rem;
 }
+@mixin description-font {
+	font-family: 'Merriweather';
+	font-style: normal;
+	font-weight: 900;
+	font-size: 3rem;
+	line-height: 4.3rem;
+	color: $gray_middle;
+}

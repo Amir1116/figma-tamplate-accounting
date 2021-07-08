@@ -11,51 +11,52 @@
 	margin-bottom: 3.12rem;
 	padding: 2.8rem 5.9rem;
 
-	background-color: #ebebeb;
+	background-color: $bg-grey-color;
 
 	@media screen and (max-width: 650px) {
 		padding: 1.5rem;
 	}
+
+	.reviews__description-text {
+		margin-bottom: 3.6rem;
+
+		font-family: 'Lato', sans-serif;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 1.12rem;
+		line-height: 1.56rem;
+
+		color: $black-color;
+	}
+
+	.reviewer-block {
+		display: flex;
+		align-items: center;
+
+		.reviewer-name {
+			margin-bottom: 0.6rem;
+
+			font-family: 'Lato', sans-serif;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 1.12rem;
+			line-height: 1.56rem;
+
+			color: $black-color;
+
+			.reviewer-block__name {
+				margin-left: 2.18rem;
+			}
+
+			.reviewer-vacancy {
+				font-family: 'Lato', sans-serif;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 0.8rem;
+				line-height: 1.18rem;
+			}
+		}
+	}
 }
 
-.reviews__description-text {
-	margin-bottom: 3.6rem;
-
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 1.12rem;
-	line-height: 1.56rem;
-
-	color: #000000;
-}
-
-.reviewer-block {
-	display: flex;
-	align-items: center;
-}
-
-.reviewer-name {
-	margin-bottom: 0.6rem;
-
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: 900;
-	font-size: 1.12rem;
-	line-height: 1.56rem;
-
-	color: #000000;
-}
-
-.reviewer-block__name {
-	margin-left: 2.18rem;
-}
-
-.reviewer-vacancy {
-	font-family: 'Lato', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 0.8rem;
-	line-height: 1.18rem;
-}
 // ================================================end section reviews
