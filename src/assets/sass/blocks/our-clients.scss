@@ -1,0 +1,81 @@
+// ===========================================our clients
+.section-our-clients {
+	padding-top: 6.25rem;
+	padding-bottom: 6.25rem;
+	@media screen and (max-width: 650px) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+}
+
+.our-client-title {
+	margin-bottom: 2.5rem;
+}
+
+.clients__description {
+	margin-bottom: 5rem;
+
+	@include description-font;
+
+	@media screen and (max-width: 650px) {
+		text-align: center;
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+}
+
+.our-clients__slider-container {
+	margin-bottom: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@media screen and (max-width: 650px) {
+		flex-direction: column;
+	}
+}
+.our-clients__item-container {
+	max-width: 25%;
+	@media screen and (max-width: 650px) {
+		max-width: 100%;
+	}
+}
+
+.our-clients-image {
+	max-width: 90%;
+}
+
+.slider-buttons-group-blue {
+	@include slider-buttons-group;
+}
+
+.slider-pagination-item-blue {
+	@include slider-item;
+	background-color: $blue_color;
+	transition: all 0.5s ease;
+
+	&:hover {
+		background-color: $blue_color;
+		opacity: 1;
+		cursor: pointer;
+	}
+}
+.slider-pagination-item-blue + .slider-pagination-item-blue {
+	margin-left: 2.5rem;
+}
+.active-slider-item-blue {
+	background-color: $blue_color;
+	opacity: 1;
+}
+.slider-button-blue {
+	@include slider-button;
+	background-color: rgba(0, 95, 163, 0.2);
+	transition: all 0.5s ease;
+	&:hover {
+		background-color: rgba(0, 95, 163, 1);
+	}
+}
+.active-button-blue {
+	background-color: rgba(0, 95, 163, 1);
+}
+// ===============================================end our clients

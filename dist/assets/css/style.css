@@ -407,35 +407,6 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-html {
-    font-size: 16px;
-}
-
-body,
-h1,
-h2,
-h3,
-p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #e5e5e5;
-}
-
-.content-container {
-    margin: 0 auto;
-    max-width: 1120px;
-}
-
-@media screen and (max-width: 1200px) {
-    .content-container {
-        max-width: 80%;
-    }
-}
-
 .section {
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -1080,4 +1051,33 @@ body {
     font-size: 0.8rem;
     line-height: 1.18rem;
     color: #000000;
+}
+
+html {
+    font-size: 16px;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 1120px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content-container {
+        max-width: 80%;
+    }
 }

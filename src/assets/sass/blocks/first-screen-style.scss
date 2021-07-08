@@ -99,7 +99,7 @@
 
 	text-decoration: none;
 
-	color: #000;
+	color: $black-color;
 
 	font-family: 'Lato', sans-serif;
 	font-style: normal;
@@ -124,7 +124,7 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 
-	color: #222222;
+	color: $gray_dark;
 	&:hover {
 		color: $blue_color;
 	}
@@ -145,7 +145,7 @@
 .header__first-screen-title {
 	width: 36.8rem;
 
-	background-color: rgba(255, 255, 255, 0);
+	background-color: $first-screen-bg;
 
 	font-family: 'Merriweather';
 	font-style: normal;
@@ -165,7 +165,7 @@
 	margin-top: 6.19rem;
 	margin-bottom: 8.7rem;
 
-	color: #fff;
+	color: $white-color;
 	border: none;
 
 	background-color: $blue_color;
@@ -209,21 +209,12 @@
 	}
 }
 
-@mixin slider-item {
-	width: 10px;
-	height: 10px;
-
-	border-radius: 50%;
-
-	opacity: 0.4;
-}
-
 .slider-pagination-item {
 	@include slider-item;
-	background-color: #fff;
+	background-color: $white-color;
 	transition: all 0.5s ease;
 	&:hover {
-		background-color: #fff;
+		background-color: $white-color;
 		opacity: 1;
 	}
 }
@@ -232,13 +223,10 @@
 }
 
 .active-slider-item {
-	background-color: #fff;
+	background-color: $white-color;
 	opacity: 1;
 }
-@mixin slider-buttons-group {
-	display: flex;
-	align-items: center;
-}
+
 .slider-buttons-group {
 	@include slider-buttons-group;
 
@@ -246,26 +234,19 @@
 		margin: auto;
 	}
 }
-@mixin slider-button {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
-	width: 3.75rem;
-	height: 3.75rem;
-}
 .slider-button {
 	@include slider-button;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: $slider-btn-bg;
 
 	transition: all 0.5s ease;
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.4);
+		background-color: $slider-btn-bg-hover;
 	}
 }
 
 .slider-button.active-button {
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: $slider-btn-bg-hover;
 }
 
 // ====================================end first-screen

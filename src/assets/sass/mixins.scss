@@ -1,0 +1,22 @@
+@mixin slider-item {
+	width: 10px;
+	height: 10px;
+
+	border-radius: 50%;
+
+	opacity: 0.4;
+}
+
+@mixin slider-buttons-group {
+	display: flex;
+	align-items: center;
+}
+
+@mixin slider-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 3.75rem;
+	height: 3.75rem;
+}
