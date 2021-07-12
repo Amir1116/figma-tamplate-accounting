@@ -1,7 +1,7 @@
 .section-about {
 	background: $white-color;
 
-	.about__container {
+	& .about__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 7.8rem;
@@ -14,11 +14,12 @@
 			grid-gap: 3rem;
 		}
 
-		.about-desription-title {
+		& .about-desription-title {
 			margin-bottom: 3.75rem;
 
 			@media screen and (max-width: 650px) {
 				margin-bottom: 2rem;
+				line-height: 3rem;
 			}
 
 			.section__description-blue {
@@ -26,7 +27,7 @@
 			}
 		}
 
-		.about__description-text {
+		& .about__description-text {
 			font-family: 'Lato', sans-serif;
 			font-style: normal;
 			font-weight: 300;
@@ -35,79 +36,79 @@
 
 			color: $black-color;
 		}
+	}
+}
 
-		.about-menu {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1.87rem;
+.about-menu {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1.87rem;
 
-			@media screen and (max-width: 650px) {
-				grid-template-columns: 1fr;
+	@media screen and (max-width: 650px) {
+		grid-template-columns: 1fr;
+	}
+
+	& .about-menu-card {
+		padding: 1.87rem 2.5rem;
+		background: $bg-grey-color;
+		color: $black-color;
+		transition: all 0.5s ease;
+
+		&:hover {
+			color: $white-color;
+			background-color: $blue_color;
+
+			a {
+				color: inherit;
 			}
+		}
 
-			.about-menu-card {
-				padding: 1.87rem 2.5rem;
-				background: $bg-grey-color;
-				color: $black-color;
-				transition: all 0.5s ease;
+		& .about-card__count {
+			margin-bottom: 1.87rem;
 
-				&:hover {
-					cursor: pointer;
-					color: $white-color;
-					background-color: $blue_color;
+			font-family: 'Lato', sans-serif;
+			font-style: normal;
+			font-weight: 900;
+			font-size: 3.43rem;
+			line-height: 4.12rem;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
 
-					a {
-						color: inherit;
-					}
-				}
+			color: inherit;
+		}
 
-				.about-card__count {
-					margin-bottom: 1.87rem;
+		& .about-card__deals {
+			margin-bottom: 2.9rem;
 
-					font-family: 'Lato', sans-serif;
-					font-style: normal;
-					font-weight: 900;
-					font-size: 3.43rem;
-					line-height: 4.12rem;
-					letter-spacing: 0.1em;
-					text-transform: uppercase;
+			font-family: 'Lato', sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 0.87rem;
+			line-height: 1.12rem;
 
-					color: inherit;
-				}
+			color: inherit;
+		}
 
-				.about-card__deals {
-					margin-bottom: 2.9rem;
+		& .about-card-link {
+			font-family: 'Lato', sans-serif;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 0.87rem;
+			line-height: 1rem;
 
-					font-family: 'Lato', sans-serif;
-					font-style: normal;
-					font-weight: 700;
-					font-size: 0.87rem;
-					line-height: 1.12rem;
-
-					color: inherit;
-				}
-
-				.about-card-link {
-					font-family: 'Lato', sans-serif;
-					font-style: normal;
-					font-weight: 700;
-					font-size: 0.87rem;
-					line-height: 1rem;
-
-					color: $blue_color;
-				}
-			}
-
-			.active-card {
-				color: $white-color;
-				background-color: $blue_color;
-
-				a {
-					color: inherit;
-				}
+			color: $blue_color;
+			&:hover {
+				cursor: pointer;
 			}
 		}
 	}
 }
+.active-card {
+	color: $white-color;
+	background-color: $blue_color;
 
+	a {
+		color: inherit;
+	}
+}
 // ===========================================end section about

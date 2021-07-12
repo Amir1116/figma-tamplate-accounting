@@ -28,33 +28,32 @@
 
 		color: $black-color;
 	}
+}
+.reviewer-block {
+	display: flex;
+	align-items: center;
 
-	.reviewer-block {
-		display: flex;
-		align-items: center;
+	.reviewer-name {
+		margin-bottom: 0.6rem;
 
-		.reviewer-name {
-			margin-bottom: 0.6rem;
+		font-family: 'Lato', sans-serif;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 1.12rem;
+		line-height: 1.56rem;
 
+		color: $black-color;
+
+		.reviewer-block__name {
+			margin-left: 2.18rem;
+		}
+
+		.reviewer-vacancy {
 			font-family: 'Lato', sans-serif;
 			font-style: normal;
-			font-weight: 900;
-			font-size: 1.12rem;
-			line-height: 1.56rem;
-
-			color: $black-color;
-
-			.reviewer-block__name {
-				margin-left: 2.18rem;
-			}
-
-			.reviewer-vacancy {
-				font-family: 'Lato', sans-serif;
-				font-style: normal;
-				font-weight: normal;
-				font-size: 0.8rem;
-				line-height: 1.18rem;
-			}
+			font-weight: normal;
+			font-size: 0.8rem;
+			line-height: 1.18rem;
 		}
 	}
 }

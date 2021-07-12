@@ -14,12 +14,12 @@
 		@media screen and (max-width: 670px) {
 			flex-direction: row;
 		}
-		.header__logo-container {
+		& .header__logo-container {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 
-			.header__logo-title {
+			& .header__logo-title {
 				margin-left: 1.9rem;
 
 				color: $blue_color;
@@ -43,7 +43,7 @@
 // ==================================navigation
 
 nav {
-	.nav-menu-icon {
+	& .nav-menu-icon {
 		display: none;
 		@media screen and (max-width: 670px) {
 			display: block;
@@ -52,42 +52,7 @@ nav {
 			width: 3rem;
 		}
 	}
-	.navigation-container {
-		display: flex;
-		flex-direction: column;
-		@media screen and (max-width: 1200px) {
-			width: 100%;
-			margin-top: 1.3rem;
-		}
 
-		@media screen and (max-width: 670px) {
-			display: none;
-		}
-		.navigation-contacts-container {
-			margin-bottom: 1.3rem;
-			.navigation-contacts-item {
-				display: flex;
-				align-items: center;
-			}
-			.navigation-contacts-link {
-				margin-left: 1rem;
-
-				text-decoration: none;
-
-				color: $black-color;
-
-				font-family: 'Lato', sans-serif;
-				font-style: normal;
-				font-weight: 400;
-				font-size: 0.8rem;
-				line-height: 1rem;
-
-				@media screen and (max-width: 750px) {
-					margin-left: 0.5rem;
-				}
-			}
-		}
-	}
 	.navigation-menu-ul,
 	.navigation-contacts-ul {
 		list-style: none;
@@ -106,7 +71,7 @@ nav {
 			margin-left: 0.5rem;
 		}
 	}
-	.navigation-menu-item-link {
+	& .navigation-menu-item-link {
 		text-decoration: none;
 
 		font-family: 'Lato', sans-serif;
@@ -123,7 +88,46 @@ nav {
 			color: $blue_color;
 		}
 	}
-} // end nav
+}
+
+.navigation-container {
+	display: flex;
+	flex-direction: column;
+	@media screen and (max-width: 1200px) {
+		width: 100%;
+		margin-top: 1.3rem;
+	}
+
+	@media screen and (max-width: 670px) {
+		display: none;
+	}
+	& .navigation-contacts-container {
+		margin-bottom: 1.3rem;
+		.navigation-contacts-item {
+			display: flex;
+			align-items: center;
+		}
+		& .navigation-contacts-link {
+			margin-left: 1rem;
+
+			text-decoration: none;
+
+			color: $black-color;
+
+			font-family: 'Lato', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 0.8rem;
+			line-height: 1rem;
+
+			@media screen and (max-width: 750px) {
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+// end nav
 
 // ===================================navigation menu
 
@@ -139,7 +143,7 @@ nav {
 
 	padding-top: 10.6rem;
 	padding-bottom: 7rem;
-	.first-screen-title {
+	& .first-screen-title {
 		width: 36.8rem;
 
 		background-color: $first-screen-bg;
@@ -158,7 +162,7 @@ nav {
 			font-size: 2rem;
 		}
 	}
-	.first-screen-button {
+	& .first-screen-button {
 		margin-top: 6.19rem;
 		margin-bottom: 8.7rem;
 

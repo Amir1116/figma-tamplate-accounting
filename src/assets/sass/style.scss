@@ -78,7 +78,7 @@ body {
 	@media screen and (max-width: 650px) {
 		flex-direction: column;
 	}
-	.slider-pagination {
+	& .slider-pagination {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -88,23 +88,12 @@ body {
 			margin-bottom: 2rem;
 		}
 
-		.slider-pagination-item {
+		& .slider-pagination-item {
 			@include slider-item;
 			background-color: $white-color;
 			transition: all 0.5s ease;
 			&:hover {
 				background-color: $white-color;
-				opacity: 1;
-			}
-		}
-
-		.slider-pagination-item-blue {
-			@include slider-item;
-			background-color: $blue_color;
-			transition: all 0.5s ease;
-
-			&:hover {
-				background-color: $blue_color;
 				opacity: 1;
 				cursor: pointer;
 			}
@@ -127,39 +116,54 @@ body {
 			opacity: 1;
 		}
 	}
-	.slider-buttons-group {
-		@include slider-buttons-group;
+}
 
-		@media screen and (max-width: 650px) {
-			margin: auto;
-		}
-		.slider-button {
-			@include slider-button;
-			background-color: $slider-btn-bg-grey;
+.slider-buttons-group {
+	@include slider-buttons-group;
 
-			transition: all 0.5s ease;
-			&:hover {
-				background-color: $slider-btn-bg-hover;
-			}
-		}
+	@media screen and (max-width: 650px) {
+		margin: auto;
+	}
+	& .slider-button {
+		@include slider-button;
+		background-color: $slider-btn-bg-grey;
 
-		.slider-button.active-button {
+		transition: all 0.5s ease;
+		&:hover {
 			background-color: $slider-btn-bg-hover;
-		}
-
-		.slider-button-blue {
-			@include slider-button;
-			background-color: rgba(0, 95, 163, 0.2);
-			transition: all 0.5s ease;
-			&:hover {
-				background-color: rgba(0, 95, 163, 1);
-			}
-		}
-		.active-button-blue {
-			background-color: rgba(0, 95, 163, 1);
+			cursor: pointer;
 		}
 	}
-	.slider-buttons-group-blue {
-		@include slider-buttons-group;
+
+	& .slider-button.active-button {
+		background-color: $slider-btn-bg-hover;
+	}
+
+	& .slider-button-blue {
+		@include slider-button;
+		background-color: rgba(0, 95, 163, 0.2);
+		transition: all 0.5s ease;
+		&:hover {
+			background-color: rgba(0, 95, 163, 1);
+			cursor: pointer;
+		}
+	}
+	& .active-button-blue {
+		background-color: rgba(0, 95, 163, 1);
+	}
+}
+.slider-buttons-group-blue {
+	@include slider-buttons-group;
+}
+
+.slider-pagination-item-blue {
+	@include slider-item;
+	background-color: $blue_color;
+	transition: all 0.5s ease;
+
+	&:hover {
+		background-color: $blue_color;
+		opacity: 1;
+		cursor: pointer;
 	}
 }
